@@ -5,6 +5,7 @@ APP_DIR="$HOME/.local/share/imggone"
 BIN_DIR="$HOME/.local/bin"
 DESKTOP_DIR="$HOME/.local/share/applications"
 SCRIPT_URL="https://raw.githubusercontent.com/JovanEhren/ImgGone/main/main.py"
+UNINSTALL_URL="https://raw.githubusercontent.com/JovanEhren/ImgGone/main/scripts/uninstall.sh"
 
 echo "Installing ImgGone..."
 
@@ -51,4 +52,4 @@ echo "ImgGone installed!"
 echo "  Launch from terminal: imggone"
 echo "  Or find it in your app menu as 'ImgGone'"
 echo ""
-echo "To uninstall, run: curl -fsSL https://raw.githubusercontent.com/JovanEhren/ImgGone/main/uninstall.sh | bash"
+echo "To uninstall, run: curl -fsSL $UNINSTALL_URL | bash"

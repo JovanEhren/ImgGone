@@ -31,7 +31,7 @@ Install PyQt6 first if you don't have it:
 Then install ImgGone with one command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/JovanEhren/ImgGone/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JovanEhren/ImgGone/main/scripts/install.sh | bash
 ```
 
 This downloads the app, adds it to your app menu, and creates an `imggone` command.
@@ -53,7 +53,7 @@ imggone
 ## Uninstall
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/JovanEhren/ImgGone/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JovanEhren/ImgGone/main/scripts/uninstall.sh | bash
 ```
 
 ## Run from source
