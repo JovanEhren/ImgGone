@@ -1,5 +1,9 @@
 # ImgGone
 
+<p align="center">
+  <img src="assets/Logo.png" width="120" alt="ImgGone logo"/>
+</p>
+
 A simple GUI tool for finding and deleting corrupted image files on Linux/KDE.
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue) ![PyQt6](https://img.shields.io/badge/PyQt6-required-green) ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)

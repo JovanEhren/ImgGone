@@ -10,7 +10,9 @@ from PyQt6.QtWidgets import (
     QAbstractItemView,
 )
 from PyQt6.QtCore import Qt, QThread, QObject, pyqtSignal
-from PyQt6.QtGui import QColor, QImage
+from PyQt6.QtGui import QColor, QImage, QIcon
+
+LOGO = Path(__file__).parent / "assets" / "Logo.png"
 
 IMAGE_EXTENSIONS = {
     ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp",
@@ -272,6 +274,8 @@ class ImgGoneApp(QMainWindow):
 def main():
     app = QApplication(sys.argv)
     app.setApplicationName("ImgGone")
+    if LOGO.exists():
+        app.setWindowIcon(QIcon(str(LOGO)))
     window = ImgGoneApp()
     window.show()
     sys.exit(app.exec())

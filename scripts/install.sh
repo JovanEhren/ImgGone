@@ -5,6 +5,7 @@ APP_DIR="$HOME/.local/share/imggone"
 BIN_DIR="$HOME/.local/bin"
 DESKTOP_DIR="$HOME/.local/share/applications"
 SCRIPT_URL="https://raw.githubusercontent.com/JovanEhren/ImgGone/main/main.py"
+LOGO_URL="https://raw.githubusercontent.com/JovanEhren/ImgGone/main/assets/Logo.png"
 UNINSTALL_URL="https://raw.githubusercontent.com/JovanEhren/ImgGone/main/scripts/uninstall.sh"
 
 echo "Installing ImgGone..."
@@ -24,9 +25,10 @@ if ! python3 -c "import PyQt6" &>/dev/null; then
     exit 1
 fi
 
-# Create app directory and download script
-mkdir -p "$APP_DIR" "$BIN_DIR" "$DESKTOP_DIR"
+# Create app directory and download files
+mkdir -p "$APP_DIR/assets" "$BIN_DIR" "$DESKTOP_DIR"
 curl -fsSL "$SCRIPT_URL" -o "$APP_DIR/main.py"
+curl -fsSL "$LOGO_URL"   -o "$APP_DIR/assets/Logo.png"
 
 # Create launcher script
 cat > "$BIN_DIR/imggone" <<EOF
@@ -41,7 +43,7 @@ cat > "$DESKTOP_DIR/imggone.desktop" <<EOF
 Name=ImgGone
 Comment=Find and delete corrupted image files
 Exec=$BIN_DIR/imggone
-Icon=image-x-generic
+Icon=$APP_DIR/assets/Logo.png
 Type=Application
 Categories=Utility;Graphics;
 Keywords=image;corrupt;delete;clean;
